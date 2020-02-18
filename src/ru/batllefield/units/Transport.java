@@ -12,8 +12,9 @@ public class Transport extends AbstractMachine implements Shootable {
 
     /**
      * Конструктор.
+     *
      * @param armor уровень брони.
-     * @param fuel остаток топлива.
+     * @param fuel  остаток топлива.
      */
     public Transport(short armor, short fuel) {
         super(fuel); // вызываем конструктор родительского класса.
@@ -22,6 +23,7 @@ public class Transport extends AbstractMachine implements Shootable {
 
     /**
      * Переопределенный метод интерфейса Shootable.
+     *
      * @param shootPower сила выстрела.
      */
     @Override

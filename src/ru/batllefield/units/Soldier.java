@@ -12,17 +12,19 @@ public class Soldier extends AbstractHuman implements Shooter, Shootable {
 
     /**
      * Конструктор.
+     *
      * @param shootPower сила выстрела.
-     * @param health уровень здоровья.
-     * @param armor уровень брони.
+     * @param health     уровень здоровья.
+     * @param armor      уровень брони.
      */
-    public Soldier(short shootPower, short health, short armor) {
+    public Soldier(short health, short armor, short shootPower) {
         super(health, armor); // вызов конструктора родителя.
         this.shootPower = shootPower; // установка значения силы выстрела.
     }
 
     /**
      * Переопределенный метод интерфейса Shootable.
+     *
      * @param shootPower сила выстрела.
      */
     @Override
@@ -39,6 +41,7 @@ public class Soldier extends AbstractHuman implements Shooter, Shootable {
 
     /**
      * Переопределенный метод интерфейса Shooter.
+     *
      * @param target цель.
      */
     @Override

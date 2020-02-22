@@ -24,7 +24,6 @@ public abstract class AbstractHuman extends AbstractArmyUnit {
         super(health);
         this.armor = armor;
         this.health = health;
-
     }
 
     /**

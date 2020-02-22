@@ -7,6 +7,7 @@ public interface Shootable {
 
     /**
      * Метод обрабатывает попадание.
+     *
      * @param shootPower сила выстрела.
      */
     void getShot(short shootPower);

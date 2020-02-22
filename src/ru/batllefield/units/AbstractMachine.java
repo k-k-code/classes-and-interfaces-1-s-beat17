@@ -3,7 +3,7 @@ package ru.batllefield.units;
 /**
  * Абстрактный класс - родительский класс для техники.
  */
-public class AbstractMachine  extends AbstractArmyUnit {
+public class AbstractMachine extends AbstractArmyUnit {
 
     /**
      * Остаток топлива.
@@ -12,22 +12,26 @@ public class AbstractMachine  extends AbstractArmyUnit {
 
     /**
      * Конструктор.
+     *
      * @param fuel остаток топлива.
      */
     protected AbstractMachine(short fuel) {
+        super();
         this.fuel = fuel;
     }
 
     /**
      * Геттер для поля fuel.
+     *
      * @return остаток топлива.
      */
-    protected short getFuel() {
+    public short getFuel() {
         return fuel;
     }
 
     /**
      * Сеттер для поля fuel.
+     *
      * @param fuel остаток топлива.
      */
     protected void setFuel(short fuel) {
@@ -36,6 +40,7 @@ public class AbstractMachine  extends AbstractArmyUnit {
 
     /**
      * Переопределенный метод класса Object.
+     *
      * @return текстовое представление объекта.
      */
     @Override

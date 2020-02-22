@@ -3,7 +3,7 @@ package ru.batllefield.units;
 /**
  * Абстрактный класс - родительский класс для солдат.
  */
-public abstract class AbstractHuman extends AbstractArmyUnit{
+public abstract class AbstractHuman extends AbstractArmyUnit {
 
     /**
      * Уровень здоровья.
@@ -16,16 +16,19 @@ public abstract class AbstractHuman extends AbstractArmyUnit{
 
     /**
      * Конструктор.
+     *
      * @param health уровень здоровья.
-     * @param armor уровень брони.
+     * @param armor  уровень брони.
      */
     protected AbstractHuman(short health, short armor) {
+        super(health);
         this.armor = armor;
         this.health = health;
     }
 
     /**
      * Геттер для поля health.
+     *
      * @return уровень здоровья.
      */
     public short getHealth() {
@@ -34,6 +37,7 @@ public abstract class AbstractHuman extends AbstractArmyUnit{
 
     /**
      * Сеттер для поля health.
+     *
      * @param health уровень здоровья.
      */
     public void setHealth(short health) {
@@ -42,6 +46,7 @@ public abstract class AbstractHuman extends AbstractArmyUnit{
 
     /**
      * Геттер для поля health.
+     *
      * @return уровень здоровья.
      */
     public short getArmor() {
@@ -50,6 +55,7 @@ public abstract class AbstractHuman extends AbstractArmyUnit{
 
     /**
      * Переопределенный метод класса Object.
+     *
      * @return текстовое представление объекта.
      */
     @Override

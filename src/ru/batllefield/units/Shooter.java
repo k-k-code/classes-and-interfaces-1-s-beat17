@@ -7,6 +7,7 @@ public interface Shooter {
 
     /**
      * Выстрел по цели.
+     *
      * @param target цель.
      */
     void shoot(Shootable target);

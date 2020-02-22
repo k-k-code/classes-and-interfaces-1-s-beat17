@@ -47,12 +47,14 @@ public class Battlefield {
     }
 
     private static void attackArmy(AbstractArmyUnit army1[], AbstractArmyUnit army2[]) {
-
         for (int i = 0; i < army1.length; i++) { //все делают 4 выстрела
             for (int j = 0; j < army1.length; j++) { //каждый из армии
-                if (army1[j] instanceof Shooter) { // если стрелок
-                    Shooter shooter = (Shooter) army1[j]; // приводим тип
-                    shooter.shoot((Shootable) army2[i]); // стреляем
+                while (army2[0].getHealth() > 0) {
+                    if (army1[j] instanceof Shooter) { // если стрелок
+                        Shooter shooter = (Shooter) army1[j]; // приводим тип
+                        shooter.shoot((Shootable) army2[i]); // стреляем
+                        System.out.println(army2[i].getHealth());
+                    }
                 }
             }
         }

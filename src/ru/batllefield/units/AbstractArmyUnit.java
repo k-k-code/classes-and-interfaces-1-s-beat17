@@ -5,12 +5,15 @@ package ru.batllefield.units;
  */
 public abstract class AbstractArmyUnit {
     private short health;
+    protected Ranks rank;
 
-    protected AbstractArmyUnit(short health) {
+    protected AbstractArmyUnit(short health, Ranks rank) {
+        this(rank);
         this.health = health;
     }
 
-    protected AbstractArmyUnit() {
+    protected AbstractArmyUnit(Ranks rank) {
+        this.rank = rank;
     }
 
     public short getHealth() {

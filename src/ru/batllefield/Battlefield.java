@@ -34,10 +34,10 @@ public class Battlefield {
     }
 
     private static void buildArmyArray(AbstractArmyUnit armyArray[]) {
-        armyArray[0] = new Soldier(sHealth, sArmor, sShootPower);
-        armyArray[1] = new Transport(sFuel, sArmor);
-        armyArray[2] = new Medic(sHealth, sArmor);
-        armyArray[3] = new Tank(sFuel, sArmor, sShootPower);
+        armyArray[0] = new Soldier(sHealth, sArmor, sShootPower, Ranks.PRIVATE);
+        armyArray[1] = new Transport(sFuel, sArmor, Ranks.SERGEANT);
+        armyArray[2] = new Medic(sHealth, sArmor, Ranks.LEUTENANT);
+        armyArray[3] = new Tank(sFuel, sArmor, sShootPower, Ranks.GENERAL);
     }
 
     private static void printArmy(AbstractArmyUnit army[]) {
@@ -47,10 +47,10 @@ public class Battlefield {
     }
 
     private static void attackArmy(AbstractArmyUnit army1[], AbstractArmyUnit army2[]) {
-        for (int i = 0; i < army1.length; i++) { //все делают 4 выстрела
-            for (int j = 0; j < army1.length; j++) { //каждый из армии
-                while (army2[0].getHealth() > 0) {
-                    if (army1[j] instanceof Shooter) { // если стрелок
+        for (int i = 0; i < army1.length; i++) {
+            if(army1[i] instanceof Shooter) {
+                for (int j = 0; j < army2.length; j++) { //каждый из армии
+                    if (army2[j] instanceof Shootable) { // если стрелок
                         Shooter shooter = (Shooter) army1[j]; // приводим тип
                         shooter.shoot((Shootable) army2[i]); // стреляем
                         System.out.println(army2[i].getHealth());
@@ -58,6 +58,7 @@ public class Battlefield {
                 }
             }
         }
+
     }
 
 }

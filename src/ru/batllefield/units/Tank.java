@@ -17,8 +17,8 @@ public class Tank extends AbstractMachine implements Shooter, Shootable {
      *
      * @param fuel остаток топлива.
      */
-    public Tank(short fuel, short armor, short shootPower) {
-        super(fuel);
+    public Tank(short fuel, short armor, short shootPower, Ranks rank) {
+        super(fuel, rank);
         this.shootPower = shootPower; // установка значения силы выстрела.
         this.armor = armor; // устанавливаем значение уровня брони.
     }

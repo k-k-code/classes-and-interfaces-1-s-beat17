@@ -15,8 +15,8 @@ public class AbstractMachine extends AbstractArmyUnit {
      *
      * @param fuel остаток топлива.
      */
-    protected AbstractMachine(short fuel) {
-        super();
+    protected AbstractMachine(short fuel, Ranks rank) {
+        super(rank);
         this.fuel = fuel;
     }
 

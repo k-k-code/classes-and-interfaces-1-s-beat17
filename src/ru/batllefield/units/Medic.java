@@ -7,8 +7,8 @@ public class Medic extends AbstractHuman implements Shootable {
      * @param health уровень здоровья.
      * @param armor  уровень брони.
      */
-    public Medic(short health, short armor) {
-        super(health, armor);
+    public Medic(short health, short armor, Ranks rank) {
+        super(health, armor, rank);
     }
 
     /**

@@ -20,8 +20,8 @@ public abstract class AbstractHuman extends AbstractArmyUnit {
      * @param health уровень здоровья.
      * @param armor  уровень брони.
      */
-    protected AbstractHuman(short health, short armor) {
-        super(health);
+    protected AbstractHuman(short health, short armor, Ranks rank) {
+        super(health, rank);
         this.armor = armor;
         this.health = health;
     }
